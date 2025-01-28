@@ -1,0 +1,22 @@
+.navbar-bg{
+  background-color: #2a2e2b;
+  color: white
+}
+body{
+  background-color: #e6e7e8ed;
+}
+.banner-container{
+  background-color: #e6e7e8ed;
+
+}
+.chart-container{
+  width: 900px;
+}
+.orange{
+  color: #FF9926;
+}
+.banner{
+  background-color: white;
+  padding: 10px;
+  border-radius: 10%;
+}
