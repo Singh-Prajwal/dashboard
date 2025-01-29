@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setFilter, fetchInventory } from "../redux/inventorySlice";
 import { RootState, AppDispatch } from "../redux/store";
@@ -17,7 +17,9 @@ const Filters: React.FC = () => {
     const updatedFilters = { ...filters, [name]: value };
     dispatch(fetchInventory(updatedFilters));
   };
-
+  useEffect(() => {
+    dispatch(fetchInventory(filters));
+  });
   return (
     <div className="flex gap-4">
       <select
@@ -26,7 +28,7 @@ const Filters: React.FC = () => {
         onChange={handleFilterChange}
         className="p-2 border rounded"
       >
-        <option value="all">All</option>
+        <option value="">All</option>
         <option value="new">New</option>
         <option value="used">Used</option>
         <option value="cpo">CPO</option>

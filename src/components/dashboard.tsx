@@ -95,7 +95,7 @@ export const Dashboard: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-light text-center py-3 mt-auto">
+      <footer className=" text-center py-3 mt-auto">
         &copy; {new Date().getFullYear()} Inventory Management System. All
         rights reserved.
       </footer>
